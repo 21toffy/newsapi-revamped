@@ -11,6 +11,7 @@ import Activate from './containers/Activate';
 import ResetPassword from './containers/ResetPassword';
 import ResetPasswordConfirm from './containers/ResetPasswordConfirm';
 import Dashboard from './containers/Dashboard';
+import NotFound from './containers/404';
 
 import Introduction from "./containers/documentation/Introduction";
 
@@ -49,6 +50,8 @@ const App = () => (
           <Route exact path="/docs/endpoints" component={Endpoint} />
           <Route exact path="/docs/get-started" component={GetStarted} />
           <Route exact path="/docs/errors" component={Errors} />
+          <Route path="*" component={NotFound} />
+
         </Switch>
       </Layout>
 

@@ -293,7 +293,8 @@ export const signup = (email, name, password, re_password) => async (
 
   try {
     const res = await axios.post(
-      `${process.env.REACT_APP_API_URL}/auth/users/`,
+      // `${process.env.REACT_APP_API_URL}/auth/users/`,
+      "http://127.0.0.1:8000/auth/users/",
 
       body,
       config

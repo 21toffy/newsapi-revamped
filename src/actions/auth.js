@@ -145,6 +145,7 @@ export const login = (email, password) => async (dispatch) => {
   try {
     const res = await axios.post(
       `${process.env.REACT_APP_API_URL}/auth/jwt/create/`,
+      // "http://127.0.0.1:8000/auth/users/",
 
       // "http://127.0.0.1:8000/auth/jwt/create/",
       body,
@@ -293,8 +294,8 @@ export const signup = (email, name, password, re_password) => async (
 
   try {
     const res = await axios.post(
-      // `${process.env.REACT_APP_API_URL}/auth/users/`,
-      "http://127.0.0.1:8000/auth/users/",
+      `${process.env.REACT_APP_API_URL}/auth/users/`,
+      // "http://127.0.0.1:8000/auth/users/",
 
       body,
       config
